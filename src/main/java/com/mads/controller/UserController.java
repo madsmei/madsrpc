@@ -15,13 +15,13 @@ import reactor.core.publisher.Flux;
  * @Version 1.0
  */
 @RestController
-@RequestMapping("")
+@RequestMapping("/user")
 public class UserController {
     @Autowired
     private IuserAPI userAPI;
 
     @GetMapping("/")
-    public void test() {
-        Flux<User> all = userAPI.getAll();
+    public Flux<User> test() {
+        return userAPI.getAll();
     }
 }

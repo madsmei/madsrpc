@@ -5,6 +5,7 @@ import com.rpc.bean.MethodInfo;
 import com.rpc.bean.ServerInfo;
 import com.rpc.proxy.ProxyCreator;
 import com.rpc.rest.RestHandler;
+import com.rpc.rest.handlers.WebClientRestHandler;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpMethod;
 import org.springframework.web.bind.annotation.*;
@@ -34,7 +35,7 @@ public class JDKProxyCreator implements ProxyCreator {
 
         log.info("createProxy#serverInfo{}",serverInfo.toString());
         //给每一个代理类一个实现
-        RestHandler restHandler = null;
+        RestHandler restHandler = new WebClientRestHandler();
         //初始化服务器信息（初始化webclient）
         restHandler.init(serverInfo);
 
