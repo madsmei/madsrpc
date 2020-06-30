@@ -28,4 +28,9 @@ public class MethodInfo {
     private Map<String,Object> methodParams;
     //请求消息体
     private Mono<?> body;
+
+    //返回Flux还是Mono
+    private boolean returnFlux;
+    //返回对象类型
+    private Class<?> returnElementType;
 }

@@ -26,4 +26,7 @@ public interface IuserAPI {
 
     @PostMapping("/")
     Mono<User> createUser(@RequestBody Mono<User> user);
+
+    @PostMapping("/free")
+    Mono<String> testRest();
 }

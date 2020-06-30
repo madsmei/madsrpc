@@ -1,5 +1,6 @@
 package com.rpc.rest;
 
+import com.rpc.bean.MethodInfo;
 import com.rpc.bean.ServerInfo;
 import java.lang.reflect.Method;
 
@@ -24,5 +25,5 @@ public interface RestHandler {
      * @Description 调用远程服务，返回数据
      * @Date 11:37 2020/6/30
     **/
-    Object invokeRest(Method method);
+    Object invokeRest(MethodInfo methodInfo);
 }
